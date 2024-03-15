@@ -20,6 +20,11 @@ class Aquarium(var length: Int = 100, var width: Int = 20, var height: Int = 40)
         // calculate the height needed
         height = (tank / (length * width)).toInt()
     }
-
+    //Step 4 - Member Variables
+    var volume: Int
+        get() = width * height * length / 1000
+        private set(value) {
+            height = (value * 1000) / (width * length)
+        }
 }
 
